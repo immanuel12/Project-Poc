@@ -1,0 +1,42 @@
+<TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+  <hashTree>
+    <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+      <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      <elementProp name="ThreadGroup.main_controller" elementType="LoopController" enabled="true">
+        <boolProp name="LoopController.continuousProcessing">false</boolProp>
+        <intProp name="LoopController.loops">1</intProp>
+      </elementProp>
+      <intProp name="ThreadGroup.num_threads">1</intProp>
+      <intProp name="ThreadGroup.ramp_time">1</intProp>
+      <longProp name="ThreadGroup.start_time">1698825202000</longProp>
+      <longProp name="ThreadGroup.end_time">1698825202000</longProp>
+      <boolProp name="ThreadGroup.scheduler">false</boolProp>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GET NameEntries API" enabled="true">
+          <stringProp name="HTTPSampler.domain">20.190.78.211</stringProp>
+          <stringProp name="HTTPSampler.port">5105</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/api/NameEntries/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.monitor">false</boolProp>
+          <boolProp name="HTTPSampler.embedded_url_re"></boolProp>
+          <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">10000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+      </hashTree>
+    </ThreadGroup>
+    <hashTree/>
+    <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+      <stringProp name="ResultCollector.error_logging">false</stringProp>
+      <stringProp name="ResultCollector.save_response_data">true</stringProp>
+      <stringProp name="ResultCollector.save_sampler_data">true</stringProp>
+      <stringProp name="ResultCollector.save_request_data">true</stringProp>
+      <stringProp name="ResultCollector.save_response_data_on_error">true</stringProp>
+    </ResultCollector>
+    <hashTree/>
+  </hashTree>
+</TestPlan>
